@@ -6,3 +6,8 @@ Tech stacks
 - Gin: Web framework.
 - PostgreSQL: Relational database.
   - pgx: PostgreSQL driver.
+
+## Usage
+```
+$ go run .
+```
