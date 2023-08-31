@@ -8,6 +8,11 @@ Tech stacks
   - pgx: PostgreSQL driver.
 
 ## Usage
+- Run hot reload API server (useful when developing).
+```
+$ make dev
+```
+- Start the API server.
 ```
 $ go run .
 ```
