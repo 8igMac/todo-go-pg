@@ -22,10 +22,6 @@ func getTodos(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, todos)
 }
 
-func home(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{"message": "hello"})
-}
-
 func getTodosByID(c *gin.Context) {
 	id := c.Param("id")
 
@@ -50,9 +46,8 @@ func postTodos(c *gin.Context) {
 
 func main() {
 	router := gin.Default()
-	router.GET("/", home)
-	router.GET("/todos", getTodos)
-	router.GET("/todos/:id", getTodosByID)
-	router.POST("/todos", postTodos)
+	router.GET("/api/todos", getTodos)
+	router.GET("/api/todos/:id", getTodosByID)
+	router.POST("/api/todos", postTodos)
 	router.Run("localhost:8080")
 }
